@@ -16,7 +16,7 @@ public class MetricsConfiguration {
 	@Bean
 	MeterRegistryCustomizer<MeterRegistry> metricsCommonTags(
 
-			@Value("${spring.application.name}") String serviceName,
+			@Value("${spring.application.name:unknown}") String serviceName,
 
 			@Value("${maithil.observability.application:maithil-art}") String application,
 
